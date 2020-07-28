@@ -1,0 +1,19 @@
+<ng-container *ngIf="authService.getToken(); else member">
+    <mat-sidenav-container class="h-100">
+        <mat-sidenav #sidenav mode="side" opened>
+            <app-side-nav></app-side-nav>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <app-header (toggle)="sidenav.toggle()"></app-header>
+            <div class="p-4">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</ng-container>
+<ng-template #member>
+    <router-outlet></router-outlet>
+</ng-template>
+
+
+

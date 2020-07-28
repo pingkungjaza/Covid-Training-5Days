@@ -1,0 +1,62 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="onClickNavToggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>CMPOS Workshop</span>
+  <span class="flex-fill"></span>
+  <div class="d-flex align-items-center">
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>search</mat-icon>
+    </button>
+    <div class="vl"></div>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon [matBadgeHidden]="mailNotification == 0" [matBadge]="mailNotification" matBadgePosition="after"
+        matBadgeColor="accent">mail_outline</mat-icon>
+    </button>
+    <div class="vl"></div>
+
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+      [matMenuTriggerFor]="notification">
+      <mat-icon [matBadgeHidden]="feedNotification == 0" [matBadge]="feedNotification" matBadgePosition="after"
+        matBadgeColor="warn">notifications_none</mat-icon>
+    </button>
+    <mat-menu #notification="matMenu" xPosition="before">
+      <!--  Lazy rendering -->
+      <ng-template matMenuContent>
+        <button mat-menu-item [matMenuTriggerFor]="payment" direction="left">Payment</button>
+        <button mat-menu-item [matMenuTriggerFor]="stock">Stock</button>
+      </ng-template>
+    </mat-menu>
+    <mat-menu #payment="matMenu">
+      <button mat-menu-item>Bacon</button>
+      <button mat-menu-item>Bike ivory card</button>
+    </mat-menu>
+    <mat-menu #stock="matMenu">
+      <button mat-menu-item>project</button>
+      <button mat-menu-item>Forge Cotton</button>
+      <button mat-menu-item>Incredible</button>
+    </mat-menu>
+
+    <button class="ml-3" mat-button [matMenuTriggerFor]="menu">
+      <div class="d-flex align-items-center text-truncate">
+        <img class="avatar rounded-circle bg-white"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png">
+        <span class="ml-2">Admin iBlurBlur</span>
+      </div>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item>
+        <mat-icon>account_circle</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+      <button mat-menu-item (click)="onClickLogout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Log out</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

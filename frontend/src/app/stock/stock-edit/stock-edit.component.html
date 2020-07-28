@@ -1,0 +1,46 @@
+<form #productForm="ngForm" (submit)="onSubmitForm(productForm)">
+    <input ngModel name="productId" hidden>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title class="d-flex justify-content-between text-align-center">
+                <span>Edit Product</span>
+                <button mat-raised-button color="primary" type="submit">submit</button>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="px-2 py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input ngModel name="name" matInput required>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Price</mat-label>
+                        <input ngModel name="price" matInput type="number" required>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Stock</mat-label>
+                        <input ngModel name="stock" matInput type="number" required>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4" *ngIf="imageSrc">
+                    <img [src]="imageSrc" class="border mr-3 img-fluid" alt="image preview">
+                </div>
+                <div class="col-lg-8">
+                    <button mat-stroked-button (click)="fileInput.click()" type="button">
+                        <mat-icon>photo</mat-icon>
+                        <span class="ml-2">Select image</span>
+                        <input (change)="onPreviewImage($event)" #fileInput accept="image/*" type="file" />
+                    </button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>

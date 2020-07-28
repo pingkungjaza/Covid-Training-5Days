@@ -1,0 +1,16 @@
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.img-icon.img-icon.img-icon.img-icon.img-icon {
+  border-radius: unset;
+}
+
+.mat-nav-list .mat-list-item:hover {
+  color: black;
+}
+
+.mat-nav-list .mat-list-item:focus {
+  color: white;
+  background-color: #ff3f81;
+}

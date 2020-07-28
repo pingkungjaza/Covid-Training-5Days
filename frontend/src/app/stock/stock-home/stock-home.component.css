@@ -1,0 +1,138 @@
+.icon {
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+table th,
+td.mat-footer-cell {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+[mat-row] td.mat-table-sticky {
+    background: unset;
+}
+
+th.mat-header-cell:first-of-type,
+td.mat-cell:first-of-type,
+th.mat-header-cell:last-of-type,
+td.mat-cell:last-of-type {
+    padding: 8px 0
+}
+
+tr.mat-footer-row td:not(:first-child) {
+    font-weight: bold;
+}
+
+th.mat-column-image,
+td.mat-column-image {
+    width: 180px;
+}
+
+th.mat-column-name,
+td.mat-column-name {
+    max-width: 150px;
+}
+
+ ::ng-deep th.mat-column-price>.mat-sort-header-container {
+    justify-content: flex-end;
+}
+
+ ::ng-deep th.mat-column-image>.mat-sort-header-container,
+ ::ng-deep th.mat-column-stock>.mat-sort-header-container,
+ ::ng-deep th.mat-column-action>.mat-sort-header-container {
+    justify-content: center;
+}
+
+ ::ng-deep .mat-sort-header-arrow,
+ ::ng-deep .mat-sort-header-sorted {
+    color: #00bcd4;
+}
+
+th.mat-column-stock,
+td.mat-column-stock,
+th.mat-column-price,
+td.mat-column-price {
+    padding: 0 8px;
+}
+
+th.mat-column-action,
+td.mat-column-action {
+    width: 150px;
+}
+
+.table-hover tr:hover {
+    background-color: #3f50b630;
+}
+
+.over-lay {
+    position: relative;
+    width: 80px;
+}
+
+.over-lay>img {
+    height: 80px;
+    object-fit: cover;
+}
+
+.over-lay-text {
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    opacity: 0.7;
+    width: 100%;
+}
+
+ ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .sticky-container {
+        height: 450px;
+        overflow: auto;
+    }
+    [mat-row] th.mat-table-sticky,
+    [mat-row] td.mat-table-sticky {
+        background: #f8f9fa;
+    }
+    th.mat-header-cell:nth-child(2) {
+        min-width: 400px;
+    }
+    th.mat-header-cell:first-of-type,
+    td.mat-cell:first-of-type,
+    th.mat-header-cell:last-of-type,
+    td.mat-cell:last-of-type {
+        padding: 12px;
+    }
+    th.mat-header-cell,
+    td.mat-cell,
+    .mat-footer-cell:nth-child(3) {
+        padding: 0 20px;
+    }
+    .over-lay {
+        width: 60px;
+    }
+    .over-lay>img {
+        height: 60px;
+    }
+    .mat-table-sticky:first-child {
+        border-right: 1px solid #e0e0e0;
+    }
+    .search_form {
+        flex-direction: column;
+        align-items: stretch !important;
+        margin: 12px 0px;
+    }
+    .search_form>.mat-form-field {
+        width: 100% !important;
+        margin-bottom: 12px;
+    }
+}

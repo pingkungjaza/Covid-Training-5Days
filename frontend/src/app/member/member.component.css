@@ -1,0 +1,10 @@
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.mat-card{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
