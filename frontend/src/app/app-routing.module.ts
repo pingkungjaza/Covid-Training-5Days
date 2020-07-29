@@ -5,6 +5,7 @@ import { StockCreateComponent } from './stock/stock-create/stock-create.componen
 import { StockHomeComponent } from './stock/stock-home/stock-home.component';
 import { MemberComponent } from './member/member.component';
 import { ShopComponent } from './shop/shop.component';
+import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from 'src/app/services/auth.guard'
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
     ], canActivate: [AuthGuard]
   },
   { path: 'shop', component: ShopComponent, canActivate: [AuthGuard] },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: '**', component: MemberComponent },
 ];
 

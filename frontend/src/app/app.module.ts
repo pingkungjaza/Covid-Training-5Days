@@ -30,6 +30,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MemberComponent } from './member/member.component';
 import { ShopComponent } from './shop/shop.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ShopComponent } from './shop/shop.component';
     HeaderComponent,
     SideNavComponent,
     MemberComponent,
-    ShopComponent
+    ShopComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
